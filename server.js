@@ -6,7 +6,7 @@ var bodyParser = require('body-parser')
 const port = 8081
 
 app.use(bodyParser.json());
-server.listen(port);
+server.listen(process.env.PORT || port);
 
 const ws = io.listen(server);
 console.log('Server listening on port ' + port);
