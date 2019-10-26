@@ -1,10 +1,15 @@
-const app = require('express')();
-const server = require('http').createServer(app);
+const cors = require('cors')
 const io = require('socket.io');
-var bodyParser = require('body-parser')
+const app = require('express')();
+const bodyParser = require('body-parser')
+const server = require('http').createServer(app);
+var dataBaseWrapper = require('./database/dbWrapper').dataBaseWrapper
 
+const db = new dataBaseWrapper();
 const port = 8081
 
+db.connect();
+app.use(cors());
 app.use(bodyParser.json());
 server.listen(process.env.PORT || port);
 
@@ -37,14 +42,31 @@ app.get('/', function (req, res) {
 app.post('/sendVitalData', function (req, res) {
   var packet = req.body.vitalData;
   var session = req.body.session;
+  console.log('Sending data to: ' + session)
   handlePacket(packet, session);
   res.send('ok');
 });
 
 app.post('/sendRelCosData', function (req, res) {
   var packet = req.body;
+  var session = req.body.session;
+  var date = (new Date()).toISOString();
   emitRelCosChannels(ws, packet);
+  db.insertRelCosData(session, date, packet.reliability, packet.cost)
   res.send('ok');
+});
+
+app.get('/getRelCosData', async function (req, res) {
+  var session = req.query.session;
+  console.log(req.query)
+  if (session == null || session == undefined || session == '') {    
+    res.status(404).send('Session not provided');    
+  }
+  else {
+    var results = await db.getRelCosData(session);    
+    res.send(results.rows);
+  }
+
 });
 
 async function emitRelCosChannels(socket, packet) {

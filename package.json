@@ -4,9 +4,11 @@
   "description": "my first socket.io app",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "firebase": "^5.8.4",
     "get-json": "^1.0.1",
+    "pg": "^7.12.1",
     "request": "^2.88.0",
     "sleep": "^6.1.0",
     "socket.io": "^2.2.0"
