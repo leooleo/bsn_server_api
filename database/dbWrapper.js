@@ -26,7 +26,7 @@ class dataBaseWrapper {
     constructor() {
         this.client = new Client(
             {
-                connectionString: process.env.DATABASE_URL || 'postgres://cayegnvuirvtld:043bb26d5bf8b80c7854230931506a9ecd9f247e10f307f8fb582e6622d969a8@ec2-54-83-202-132.compute-1.amazonaws.com:5432/d9pd86lrfc5jc',
+                connectionString: 'postgres://cayegnvuirvtld:043bb26d5bf8b80c7854230931506a9ecd9f247e10f307f8fb582e6622d969a8@ec2-54-83-202-132.compute-1.amazonaws.com:5432/d9pd86lrfc5jc',
                 ssl: true,
             }
         );        
