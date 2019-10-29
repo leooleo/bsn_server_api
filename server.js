@@ -4,46 +4,42 @@ const app = require('express')();
 const bodyParser = require('body-parser')
 const server = require('http').createServer(app);
 var dataBaseWrapper = require('./database/dbWrapper').dataBaseWrapper
+var logicWrapper = require('./src/businessLogic')
 
 const db = new dataBaseWrapper();
 const port = 8081
+const ws = io.listen(server);
+var bsnUrl = null
 
 db.connect();
 app.use(cors());
 app.use(bodyParser.json());
 server.listen(process.env.PORT || port);
-
-const ws = io.listen(server);
 console.log('Server listening on port ' + port);
 
-async function splitPacket(packet) {
-  var batteries = packet.split('&')[0].split(',')
-  var vitals = packet.split('&')[1].split('/')
-
-  var thermometerPacket = { battery: batteries[0], risk: vitals[0].split('=')[0], raw: vitals[0].split('=')[1] };
-  var ecgPacket = { battery: batteries[1], risk: vitals[1].split('=')[0], raw: vitals[1].split('=')[1] };
-  var oximeterPacket = { battery: batteries[2], risk: vitals[2].split('=')[0], raw: vitals[2].split('=')[1] };
-  var bpmsPacket = { battery: batteries[3], risk: vitals[3].split('=')[0], raw: vitals[3].split('=')[1] };
-  var bpmdPacket = { battery: batteries[3], risk: vitals[4].split('=')[0], raw: vitals[4].split('=')[1] };
-  var patientRiskPacket = { data: vitals[5], alert: Number(vitals[5]) > 60 ? true : false }
-
-  return [thermometerPacket, ecgPacket, oximeterPacket, bpmsPacket, bpmdPacket, patientRiskPacket];
-}
-
-async function handlePacket(packet, session) {
-  var packets = await splitPacket(packet);
-  emitVitalChannels(ws, packets, session);
-}
 
 app.get('/', function (req, res) {
+  console.log('Get!');
   res.send('ok');
+});
+
+app.post('/bsnRegister', function (req, res) {
+  // get client ip
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+  ip = ip.toString().replace('::ffff:', '')
+  // get client port
+  var port = req.body.port
+  bsnUrl = 'http://' + ip + ':' + port
+
+  console.log('ip: ' + bsnUrl)
+  res.send('ok')
 });
 
 app.post('/sendVitalData', function (req, res) {
   var packet = req.body.vitalData;
   var session = req.body.session;
-  console.log('Sending data to: ' + session)
-  handlePacket(packet, session);
+  console.log(packet)
+  logicWrapper.handlePacket(ws,packet, session);
   res.send('ok');
 });
 
@@ -51,7 +47,7 @@ app.post('/sendRelCosData', function (req, res) {
   var packet = req.body;
   var session = req.body.session;
   var date = (new Date()).toISOString();
-  emitRelCosChannels(ws, packet);
+  // emitRelCosChannels(ws, packet);
   db.insertRelCosData(session, date, packet.reliability, packet.cost)
   res.send('ok');
 });
@@ -59,30 +55,15 @@ app.post('/sendRelCosData', function (req, res) {
 app.get('/getRelCosData', async function (req, res) {
   var session = req.query.session;
   console.log(req.query)
-  if (session == null || session == undefined || session == '') {    
-    res.status(404).send('Session not provided');    
+  if (session == null || session == undefined || session == '') {
+    res.status(404).send('Session not provided');
   }
   else {
-    var results = await db.getRelCosData(session);    
+    var results = await db.getRelCosData(session);
     res.send(results.rows);
   }
 
 });
-
-async function emitRelCosChannels(socket, packet) {
-  // console.log(packet)
-  socket.emit('reliabilityChannel', packet.reliability);
-  socket.emit('costChannel', packet.cost);
-}
-
-async function emitVitalChannels(socket, array, session) {
-  socket.emit('thermometerChannel=' + session, array[0]);
-  socket.emit('ecgChannel=' + session, array[1]);
-  socket.emit('oximeterChannel=' + session, array[2]);
-  socket.emit('bpmsChannel=' + session, array[3]);
-  socket.emit('bpmdChannel=' + session, array[4]);
-  socket.emit('patientChannel=' + session, array[5]);
-}
 
 ws.on('connection', function (socket) {
   console.log('Client connected: ' + socket.id);
@@ -96,4 +77,3 @@ ws.on('connection', function (socket) {
     console.log('Client disconnected: ' + socket.id);
   });
 });
-
