@@ -8,13 +8,15 @@ function stopBsn(bsnUrl, res) {
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 if (body == 'bsn is not running') {
-                    res.status(400).send(body);
+                    res.send(body);
                 }
                 else if(body == 'stopped'){
                     res.send('stopped')
                 }                
             }
             else {
+                console.log('An error has occurred')
+                console.log(error)
                 res.send(body)
             }
         }
@@ -29,13 +31,15 @@ function startBsn(bsnUrl, res) {
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 if (body == 'already running') {
-                    res.status(400).send(body);
+                    res.send(body);
                 }
                 else if(body == 'started'){
                     res.send('started')
                 }                
             }
             else {
+                console.log('An error has occurred')
+                console.log(error)
                 res.send(body)
             }
         }
@@ -52,6 +56,8 @@ function isBsnActive(bsnUrl, res) {
                 res.send(body)
             }
             else {
+                console.log('An error has occurred')
+                console.log(error)
                 res.send(body)
             }
         }
