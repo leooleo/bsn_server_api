@@ -5,18 +5,19 @@ const bodyParser = require('body-parser')
 const server = require('http').createServer(app);
 var dataBaseWrapper = require('./database/dbWrapper').dataBaseWrapper
 var logicWrapper = require('./src/businessLogic')
+const apiComm = require('./src/apiCommunication')
 
 const db = new dataBaseWrapper();
 const port = 8081
 const ws = io.listen(server);
-var bsnUrl = null
+// var bsnUrl = null
+var bsnUrl = 'http://192.168.5.105:3000'
 
 db.connect();
 app.use(cors());
 app.use(bodyParser.json());
 server.listen(process.env.PORT || port);
 console.log('Server listening on port ' + port);
-
 
 app.get('/', function (req, res) {
   console.log('Get!');
@@ -39,7 +40,7 @@ app.post('/sendVitalData', function (req, res) {
   var packet = req.body.vitalData;
   var session = req.body.session;
   console.log(packet)
-  logicWrapper.handlePacket(ws,packet, session);
+  logicWrapper.handlePacket(ws, packet, session);
   res.send('ok');
 });
 
@@ -62,7 +63,18 @@ app.get('/getRelCosData', async function (req, res) {
     var results = await db.getRelCosData(session);
     res.send(results.rows);
   }
+});
 
+app.get('/isBsnActive', async function (req, res) {  
+  await apiComm.isBsnActive(bsnUrl, res)  
+});
+
+app.get('/startBsn', async function (req, res) {  
+  await apiComm.startBsn(bsnUrl, res)  
+});
+
+app.get('/stopBsn', async function (req, res) {
+  await apiComm.stopBsn(bsnUrl, res)  
 });
 
 ws.on('connection', function (socket) {
