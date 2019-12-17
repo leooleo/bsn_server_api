@@ -37,10 +37,9 @@ app.post('/bsnRegister', function (req, res) {
 });
 
 app.post('/sendVitalData', function (req, res) {
-  var packet = req.body.vitalData;
-  var session = req.body.session;
+  var packet = req.body;  
   console.log(packet)
-  logicWrapper.handlePacket(ws, packet, session);
+  logicWrapper.handlePacket(ws, packet, 0);
   res.send('ok');
 });
 
