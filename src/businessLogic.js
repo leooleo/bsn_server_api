@@ -4,9 +4,7 @@ async function emitVitalChannels(socket, packet, session) {
     socket.emit('thermometerChannel=' + session, packet['ThermometerPacket']);
     socket.emit('ecgChannel=' + session,  packet['EcgPacket']);
     socket.emit('oximeterChannel=' + session,  packet['OximeterPacket']);
-    // socket.emit('bpmsChannel=' + session, packet['BpmsPacket'] );
-    // socket.emit('bpmdChannel=' + session,  packet['ThermometerPacket']);
-    socket.emit('patientChannel=' + session,  packet['PatientPacket']);
+    socket.emit('patientChannel=' + session,  packet['Patientrisk']);
 }
 
 async function handlePacket(ws,packet, session) {    

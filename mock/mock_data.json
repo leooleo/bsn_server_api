@@ -1,0 +1,622 @@
+[
+  {
+    "Cost": 0,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 98.99999999999999,
+      "raw": 94.22530064981028,
+      "risk": 13.400343599783175
+    },
+    "Patientrisk": 0,
+    "Reliability": 0,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 98.39999999999998,
+      "raw": 98.9103719893481,
+      "risk": 18.754710844969264
+    },
+    "Patientrisk": 13.400343599783175,
+    "Reliability": 0,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.6000000000000227,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 97.79999999999997,
+      "raw": 72.73619150439467,
+      "risk": 11.158638280691807
+    },
+    "Patientrisk": 18.754710844969264,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 97.19999999999996,
+      "raw": 75.78584676774511,
+      "risk": 7.6733179797198705
+    },
+    "Patientrisk": 11.158638280691807,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 96.59999999999995,
+      "raw": 84.15272087287482,
+      "risk": 1.8888238547140839
+    },
+    "Patientrisk": 7.6733179797198705,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 95.99999999999994,
+      "raw": 71.59336916165134,
+      "risk": 12.464720958112757
+    },
+    "Patientrisk": 1.8888238547140839,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 95.39999999999993,
+      "raw": 99.75084556712324,
+      "risk": 19.715252076712268
+    },
+    "Patientrisk": 12.464720958112757,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 94.79999999999993,
+      "raw": 99.8761463941803,
+      "risk": 19.858453021920337
+    },
+    "Patientrisk": 19.715252076712268,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 94.19999999999992,
+      "raw": 98.8693227953676,
+      "risk": 18.70779748042011
+    },
+    "Patientrisk": 19.858453021920337,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 93.59999999999991,
+      "raw": 90.40436371241614,
+      "risk": 9.033558528475591
+    },
+    "Patientrisk": 18.70779748042011,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 92.9999999999999,
+      "raw": 99.33883921219287,
+      "risk": 19.24438767107756
+    },
+    "Patientrisk": 9.033558528475591,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 92.39999999999989,
+      "raw": 68.84516127954723,
+      "risk": 15.605529966231739
+    },
+    "Patientrisk": 19.24438767107756,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 91.79999999999988,
+      "raw": 92.93370498623423,
+      "risk": 11.92423426998198
+    },
+    "Patientrisk": 15.605529966231739,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 91.19999999999987,
+      "raw": 75.39603073452828,
+      "risk": 8.118822017681964
+    },
+    "Patientrisk": 11.92423426998198,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 90.59999999999987,
+      "raw": 65.16742195467604,
+      "risk": 19.80866062322738
+    },
+    "Patientrisk": 8.118822017681964,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 89.99999999999986,
+      "raw": 68.93625806196631,
+      "risk": 15.501419357752784
+    },
+    "Patientrisk": 19.80866062322738,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 89.39999999999985,
+      "raw": 92.7272563840709,
+      "risk": 11.688293010366742
+    },
+    "Patientrisk": 15.501419357752784,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 88.79999999999984,
+      "raw": 98.58223488920953,
+      "risk": 18.379697016239465
+    },
+    "Patientrisk": 11.688293010366742,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 88.19999999999983,
+      "raw": 87.95092436429769,
+      "risk": 6.229627844911647
+    },
+    "Patientrisk": 18.379697016239465,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 87.59999999999982,
+      "raw": 66.24990878462035,
+      "risk": 18.57153281757675
+    },
+    "Patientrisk": 6.229627844911647,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 86.99999999999982,
+      "raw": 94.71952569383319,
+      "risk": 13.965172221523648
+    },
+    "Patientrisk": 18.57153281757675,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 86.3999999999998,
+      "raw": 88.84758384960931,
+      "risk": 7.254381542410638
+    },
+    "Patientrisk": 13.965172221523648,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 85.7999999999998,
+      "raw": 78.95584819693019,
+      "risk": 4.050459203508353
+    },
+    "Patientrisk": 7.254381542410638,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 85.19999999999979,
+      "raw": 90.92265356367474,
+      "risk": 9.625889787056849
+    },
+    "Patientrisk": 4.050459203508353,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 84.59999999999978,
+      "raw": 81.61655382160322,
+      "risk": 1.009652775310607
+    },
+    "Patientrisk": 9.625889787056849,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 83.99999999999977,
+      "raw": 79.77306883868947,
+      "risk": 3.1164927557834647
+    },
+    "Patientrisk": 1.009652775310607,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 83.39999999999976,
+      "raw": 71.08528102001681,
+      "risk": 13.04539311998079
+    },
+    "Patientrisk": 3.1164927557834647,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 82.79999999999976,
+      "raw": 89.71161293228319,
+      "risk": 8.241843351180787
+    },
+    "Patientrisk": 13.04539311998079,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 1.200000000000017,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 82.19999999999975,
+      "raw": 66.114149563458,
+      "risk": 18.726686213190856
+    },
+    "Patientrisk": 8.241843351180787,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 81.59999999999974,
+      "raw": 74.69230437909236,
+      "risk": 8.923080709608728
+    },
+    "Patientrisk": 18.726686213190856,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  },
+  {
+    "Cost": 0.6000000000000085,
+    "EcgPacket": {
+      "battery": 74.69230437909236,
+      "raw": 64,
+      "risk": 0
+    },
+    "OximeterPacket": {
+      "battery": 80.99999999999973,
+      "raw": 74.69230437909236,
+      "risk": 66
+    },
+    "Patientrisk": 8.923080709608728,
+    "Reliability": 1,
+    "ThermometerPacket": {
+      "battery": 74.69230437909236,
+      "raw": 74.69230437909236,
+      "risk": 0
+    }
+  }
+]

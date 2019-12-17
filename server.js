@@ -39,16 +39,11 @@ app.post('/bsnRegister', function (req, res) {
 app.post('/sendVitalData', function (req, res) {
   var packet = req.body;  
   console.log(packet)
-  logicWrapper.handlePacket(ws, packet, 0);
-  res.send('ok');
-});
-
-app.post('/sendRelCosData', function (req, res) {
-  var packet = req.body;
-  var session = req.body.session;
+  logicWrapper.handlePacket(ws, packet, 1);
+  
   var date = (new Date()).toISOString();
-  // emitRelCosChannels(ws, packet);
-  db.insertRelCosData(session, date, packet.reliability, packet.cost)
+  db.insertRelCosData(1, date, packet['Reliability'], packet['Cost'])
+
   res.send('ok');
 });
 
