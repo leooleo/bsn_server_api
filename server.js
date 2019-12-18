@@ -11,7 +11,7 @@ const db = new dataBaseWrapper();
 const port = 8081
 const ws = io.listen(server);
 // var bsnUrl = null
-var bsnUrl = 'http://192.168.5.105:3000'
+var bsnUrl = 'http://164.41.75.167:8080'
 
 db.connect();
 app.use(cors());
