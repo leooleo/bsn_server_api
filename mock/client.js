@@ -6,15 +6,18 @@ var sleep = require('system-sleep');
 
 
 
-function addData(file) {  
-  for (let index = 0; index < file.length; index ++) {    
+function addData(file) {
+  for (let index = 0; index < 10; index++) {
     var packet = file[index]
     request.post(
-      'http://localhost:8081/sendVitalData',
-      { json: packet},
+      'https://bsnapi.herokuapp.com/sendVitalData',
+      { json: packet },
       function (error, response, body) {
         if (!error && response.statusCode == 200) {
           console.log(body);
+        }
+        if(error) {
+          console.log(error);
         }
       }
     )

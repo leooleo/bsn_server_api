@@ -9,7 +9,7 @@ class dataBaseWrapper {
     }
 
     async getRelCosData(session) {
-        var res = this.client.query(`select timeinserted, reliability, cost from relialibilitycostdata where sessionId = ${session};`)
+        var res = this.client.query(`select timeinserted, reliability, cost from relialibilitycostdata where sessionId = ${session} and timeinserted > (select now() - INTERVAL '30 min');`)
         return res;
     }
 
