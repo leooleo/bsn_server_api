@@ -83,3 +83,5 @@ ws.on('connection', function (socket) {
     console.log('Client disconnected: ' + socket.id);
   });
 });
+
+db.cleanDatabase();

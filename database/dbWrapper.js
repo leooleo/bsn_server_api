@@ -9,12 +9,17 @@ class dataBaseWrapper {
     }
 
     async getRelCosData(session) {
-        var res = this.client.query(`select timeinserted, reliability, cost from relialibilitycostdata where sessionId = ${session} and timeinserted > (select now() - INTERVAL '30 min');`)
+        var res = this.client.query(`select timeinserted, reliability, cost from relialibilitycostdata where sessionId = ${session} and timeinserted >= (select now() - INTERVAL '30 min');`)
         return res;
     }
 
     async insertRelCosData(session, dateString, reliability, cost) {
         var res = this.client.query(`insert into relialibilitycostdata(sessionId,timeInserted,reliability, cost) values (${session},\'${dateString}\', ${reliability}, ${cost});`)
+        return res;
+    }
+
+    async cleanDatabase() {
+        var res = this.client.query(`delete from relialibilitycostdata where timeinserted < (select now() - INTERVAL '30 min');`)
         return res;
     }
 

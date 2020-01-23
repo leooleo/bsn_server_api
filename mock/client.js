@@ -7,7 +7,7 @@ var sleep = require('system-sleep');
 
 
 function addData(file) {
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 1; index++) {
     var packet = file[index]
     request.post(
       'https://bsnapi.herokuapp.com/sendVitalData',
