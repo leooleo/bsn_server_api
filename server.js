@@ -37,10 +37,10 @@ app.post('/bsnRegister', function (req, res) {
 });
 
 app.post('/sendVitalData', function (req, res) {
-  var packet = req.body;  
+  var packet = req.body;
   console.log(packet)
   logicWrapper.handlePacket(ws, packet, 1);
-  
+
   var date = (new Date()).toISOString();
   db.insertRelCosData(1, date, packet['Reliability'], packet['Cost'])
 
@@ -59,16 +59,16 @@ app.get('/getRelCosData', async function (req, res) {
   }
 });
 
-app.get('/isBsnActive', async function (req, res) {  
-  await apiComm.isBsnActive(bsnUrl, res)  
+app.get('/isBsnActive', async function (req, res) {
+  await apiComm.isBsnActive(bsnUrl, res)
 });
 
-app.get('/startBsn', async function (req, res) {  
-  await apiComm.startBsn(bsnUrl, res)  
+app.get('/startBsn', async function (req, res) {
+  await apiComm.startBsn(bsnUrl, res)
 });
 
 app.get('/stopBsn', async function (req, res) {
-  await apiComm.stopBsn(bsnUrl, res)  
+  await apiComm.stopBsn(bsnUrl, res)
 });
 
 ws.on('connection', function (socket) {
@@ -84,4 +84,7 @@ ws.on('connection', function (socket) {
   });
 });
 
-db.cleanDatabase();
+setInterval(function () {
+  console.log("Cleaning database");
+  db.cleanDatabase();
+}, 60000);
