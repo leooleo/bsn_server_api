@@ -87,4 +87,4 @@ ws.on('connection', function (socket) {
 setInterval(function () {
   console.log("Cleaning database");
   db.cleanDatabase();
-}, 60000);
+}, 20000);
