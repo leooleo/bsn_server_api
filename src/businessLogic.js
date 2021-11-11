@@ -3,6 +3,7 @@
 async function emitVitalChannels(socket, packet, session) {
     socket.emit('thermometerChannel=' + session, packet['ThermometerPacket']);
     socket.emit('ecgChannel=' + session,  packet['EcgPacket']);
+    socket.emit('glucoseChannel=' + session,  packet['GlucosePacket']);
     socket.emit('ABPSChannel=' + session,  packet['ABPSPacket']);
     socket.emit('ABPDChannel=' + session,  packet['ABPDPacket']);
     socket.emit('oximeterChannel=' + session,  packet['OximeterPacket']);
